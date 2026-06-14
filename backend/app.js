@@ -9,10 +9,11 @@ import contactRoutes from "./routes/contactRoutes.js";
 const app = express();
 
 app.use(cors({
-  origin: "https://netra-secure-ai-tau.vercel.app/",
+  origin: process.env.FRONTEND_URL, 
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
 app.use(express.json());
 
 app.use("/chat", chatRoutes);
