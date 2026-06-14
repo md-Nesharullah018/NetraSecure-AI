@@ -8,7 +8,11 @@ import contactRoutes from "./routes/contactRoutes.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://netra-secure-ai-tau.vercel.app/", // Testing ke liye ye sahi hai, baad mein yahan apni Vercel site ka URL daal dein
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 app.use("/chat", chatRoutes);
