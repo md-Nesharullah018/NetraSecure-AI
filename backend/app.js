@@ -1,4 +1,4 @@
-import 'dotenv/config'; // Sabse upar, sabse pehle
+import 'dotenv/config'; 
 import express from "express";
 import cors from "cors";
 
@@ -9,7 +9,7 @@ import contactRoutes from "./routes/contactRoutes.js";
 const app = express();
 
 app.use(cors({
-  origin: "https://netra-secure-ai-tau.vercel.app/", // Testing ke liye ye sahi hai, baad mein yahan apni Vercel site ka URL daal dein
+  origin: "https://netra-secure-ai-tau.vercel.app/",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
